@@ -1,0 +1,14 @@
+PREGUNTAS DE REFLEXION
+1. ¿Qué pasa si se envía una clase que no hereda de Mascota?
+-	No funciona debido a que no hereda de la clase padre
+2. ¿Cómo se comporta si eliminas el instanceof y casteas directamente?
+-	Puede ejecutar, pero  al momento de ejecutar da un error
+
+
+PREGUNTAS DE CIERRE
+1.	¿Qué modificadores son accesibles desde una subclase en otro paquete?
+-	Los modificadores accesibles desde una subclase en otro paquete son public y protected.
+2.	¿Qué modificadores permiten acceder desde cualquier clase del mismo paquete?
+-	Default, protected y public.
+3.	¿Qué pasaría si todos los atributos fueran public?
+-	el código seria más frágil y difícil de mantener y más propenso a errores.
