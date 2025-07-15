@@ -52,7 +52,7 @@ public class Consulta {
     private LocalDate fecha; //Datos más estructurados
     private Veterinario veterinario;
 
-    public Consulta(String codigo, String fecha, Veterinario veterinario) {
+    public Consulta(String codigo, String fecha, Veterinario veterinario) {  //Constructor
         /*this.codigo = codigo;
         this.fecha = fecha;
        /this.veterinario = veterinario;*/   //Más flexible y seguro
@@ -88,7 +88,7 @@ public class Consulta {
 
     public void setFecha(String fechaTexto) {
         try {
-            this.fecha = LocalDate.parse(fechaTexto); // Formato YYYY-MM-DD
+            this.fecha = LocalDate.parse(fechaTexto); // Formato Año-Mes-Dia
         } catch (DateTimeParseException e) {
             throw new IllegalArgumentException("Formato de fecha inválido.");
         }

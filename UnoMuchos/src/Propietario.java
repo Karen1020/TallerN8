@@ -65,13 +65,12 @@ public class Propietario {
     private String nombre;
     private String documento;
     private String telefono;
-    private ArrayList<Mascota> mascotas; // Relación 1 a muchos
+    private ArrayList<Mascota> mascotas;
 
     public Propietario(String nombre, String documento, String telefono) {
         /*this.nombre = nombre;
         this.documento = documento;
         this.telefono = telefono;*/ //Dueño bien creado
-        //Refactor: se usa setters con validaciones
         setNombre(nombre);
         setDocumento(documento);
         setTelefono(telefono);
@@ -101,8 +100,8 @@ public class Propietario {
 
     /*public void setNombre(String nombre) {
         this.nombre = nombre;
-    }*/                                         //Sin identificar
-    // Refactor: validación del nombre
+    }*/
+    //Validación del nombre
     public void setNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre no puede estar vacío.");
@@ -117,7 +116,7 @@ public class Propietario {
     /*public void setDocumento(String documento) {
         this.documento = documento;
     }*/                                                  //Sin identificar
-    // Refactor: validación del documento
+    //Validación del documento
     public void setDocumento(String documento) {
         if (documento == null || documento.length() < 5) {
             throw new IllegalArgumentException("Documento inválido.");
@@ -132,7 +131,7 @@ public class Propietario {
     /*public void setTelefono(String telefono) {
         this.telefono = telefono;
     }*/
-    // Refactor: validación del teléfono
+    //Validación del teléfono
     public void setTelefono(String telefono) {
         if (telefono == null || telefono.length() < 7) {
             throw new IllegalArgumentException("Teléfono inválido.");
@@ -142,8 +141,8 @@ public class Propietario {
 
     public ArrayList<Mascota> getMascotas() {
         // return mascotas;
-        // Refactor: copia defensiva
-        return new ArrayList<>(mascotas);             //Proteger datos internos
+        // copia defensiva
+        return new ArrayList<>(mascotas);//Protege datos internos
     }
 
     /*public void setMascotas(ArrayList<Mascota> mascotas) {

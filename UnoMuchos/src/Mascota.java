@@ -69,7 +69,7 @@ public class Mascota {
 
     public Mascota(String nombre, String especie, int edad) {
         /*this.nombre = nombre;
-        this.especie = especie;         //adiós consultas, hola historial más limpio y seguro
+        this.especie = especie;         //adiós consultas, hola historial más limpio
         this.edad = edad;
         this.consultas = new ArrayList<>();*/
         //Refactor: usar setters + historial

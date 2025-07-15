@@ -4,7 +4,7 @@ public class Historial {
 
     public Historial() {
         this.consultas = new ArrayList<>();
-    }
+    } //Inicializa la lista vacía al crear un nuevo historial
 
     public void agregarConsulta(Consulta consulta) {
         if (consulta != null) {
@@ -14,11 +14,11 @@ public class Historial {
 
     public void mostrarConsultas() {
         if (consultas.isEmpty()) {
-            System.out.println("Sin consultas registradas.");
+            System.out.println("Sin consultas registradas");
         } else {
             for (Consulta c : consultas) {
                 c.mostrarConsulta();
-                System.out.println("--------------------------");
+                System.out.println("---------------");
             }
         }
     }

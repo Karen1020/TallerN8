@@ -1,12 +1,12 @@
 public class IDGenerator {
-    private static int contadorConsulta = 0;
-    private static int contadorMascota = 0;
+    private static int contadorConsulta = 1;
+    private static int contadorPaciente = 1;
 
     public static String generarCodigoConsulta() {
-        return "C" + (++contadorConsulta);
+        return "C" + (contadorConsulta++);
     }
 
-    public static String generarCodigoMascota() {
-        return "M" + (++contadorMascota);
+    public static String generarCodigoPaciente() {
+        return "P" + (contadorPaciente++);
     }
 }

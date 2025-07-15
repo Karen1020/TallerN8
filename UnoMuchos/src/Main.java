@@ -86,8 +86,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // === Registro del Propietario ===
-        System.out.println("=== Registro del Propietario ===");
+        //Registro del Propietario
+        System.out.println("  Registro del Propietario ");
         System.out.print("Nombre: ");
         String nombreProp = sc.nextLine();
 
@@ -97,14 +97,14 @@ public class Main {
         System.out.print("Teléfono: ");
         String telefono = sc.nextLine();
 
-        Propietario propietario = new Propietario(nombreProp, documento, telefono);
+        Propietario propietario = new Propietario(nombreProp, documento, telefono); //Se piden datos básicos (nombre, documento y teléfono)
 
-        // === Registro de Mascotas ===
-        System.out.print("\n¿Cuántas mascotas desea registrar?: ");
+        //Registro de Mascotas
+        System.out.print("\n¿Cuántas mascotas desea registrar?");
         int numMascotas = Integer.parseInt(sc.nextLine());
 
         for (int i = 1; i <= numMascotas; i++) {
-            System.out.println("\n--- Mascota #" + i + " ---");
+            System.out.println("\n Mascota #" + i + " ---");
 
             System.out.print("Nombre de la mascota: ");
             String nombreMascota = sc.nextLine();
@@ -115,18 +115,18 @@ public class Main {
             System.out.print("Edad: ");
             int edad = Integer.parseInt(sc.nextLine());
 
-            // Usar código automático para la mascota (no almacenado aún)
+            // Usar código automático para la mascota
             Mascota mascota = new Mascota(nombreMascota, especie, edad);
             propietario.agregarMascota(mascota);
 
-            // === Registro de Consultas ===
-            System.out.print("¿Cuántas consultas desea agregar a esta mascota?: ");
+            //Registro de Consultas
+            System.out.print("¿Cuántas consultas desea agregar a esta mascota?");
             int numConsultas = Integer.parseInt(sc.nextLine());
 
             for (int j = 1; j <= numConsultas; j++) {
                 System.out.println("-> Consulta #" + j);
 
-                // Código automático con IDGenerator
+                // Código con IDGenerator
                 String codigo = IDGenerator.generarCodigoConsulta();
 
                 System.out.print("Fecha (Año-Mes-Dia): ");
@@ -147,7 +147,7 @@ public class Main {
         }
 
         // Mostrar resultados
-        System.out.println("\n===== FICHA CLÍNICA COMPLETA =====");
+        System.out.println("\n FICHA CLÍNICA COMPLETA ");
         propietario.mostrarInformacion();
         propietario.mostrarMascotas();
 
@@ -156,8 +156,6 @@ public class Main {
 
     /*
     public static void main(String[] args) {
-        // Este bloque de código fue reemplazado por una version más segura
-        // generación de códigos únicos y uso de LocalDate
-    }
+        // Este bloque fue reemplazado
     */
 }

@@ -31,7 +31,6 @@ public class Veterinario {
     public Veterinario(String nombre, String especialidad) {
         /*this.nombre = nombre;
         this.especialidad = especialidad;*/  //Datos limpios desde el constructor
-        // Refactor: validación de argumentos
         setNombre(nombre);
         setEspecialidad(especialidad);
     }
