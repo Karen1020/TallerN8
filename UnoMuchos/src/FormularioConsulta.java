@@ -1,8 +1,7 @@
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
-public class FormularioConsulta extends JInternalFrame {
+public class FormularioConsulta extends JInternalFrame { //Hereda a una ventana interna
 
     public FormularioConsulta(ArrayList<Paciente> pacientes) {
         super("Registrar Consulta de Vacunación", true, true, true, true);
@@ -12,7 +11,7 @@ public class FormularioConsulta extends JInternalFrame {
         JLabel lblPaciente = new JLabel("Seleccionar Paciente:");
         JComboBox<String> cbPacientes = new JComboBox<>(); //Llena el combo box con cada paciente registrado
 
-        for (Paciente p : pacientes) {
+        for (Paciente p : pacientes) { //Muestra identificador y nombre del paciente comboBox es un despegable
             cbPacientes.addItem(p.getId() + " - " + p.getNombre());
         }
 

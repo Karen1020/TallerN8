@@ -57,8 +57,6 @@ public class Mascota {
         }
     }
 } */
-
-import java.util.ArrayList;
 public class Mascota {
     private String nombre;
     private String especie;
@@ -95,27 +93,27 @@ public class Mascota {
                 System.out.println("--------------------------");
             }
         }*/
-        historial.mostrarConsultas(); //nuevo método
+        historial.mostrarConsultas(); //nuevo metodo
     }
 
     //Nuevos setters con validación
     public void setNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("Nombre inválido.");
+            throw new IllegalArgumentException("Nombre inválido");
         }
         this.nombre = nombre;
     }
 
     public void setEspecie(String especie) {
         if (especie == null || especie.isBlank()) {
-            throw new IllegalArgumentException("Especie inválida.");
+            throw new IllegalArgumentException("Especie inválida");
         }
         this.especie = especie;
     }
 
     public void setEdad(int edad) {
         if (edad < 0) {
-            throw new IllegalArgumentException("Edad no puede ser negativa.");
+            throw new IllegalArgumentException("Edad no puede ser negativa");
         }
         this.edad = edad;
     }

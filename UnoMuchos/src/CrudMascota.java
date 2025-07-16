@@ -19,8 +19,8 @@ public class CrudMascota {
 
             try {
                 opcion = Integer.parseInt(sc.nextLine());
-            } catch (NumberFormatException e) { //si se digita algo que no sea un numero
-                opcion = -1;
+            } catch (NumberFormatException e) {
+                opcion = -1; // Opción inválida si no es número
             }
 
             switch (opcion) {
@@ -43,7 +43,7 @@ public class CrudMascota {
             System.out.print("Edad: ");
             int edad = Integer.parseInt(sc.nextLine());
 
-            mascotas.add(new Mascota(nombre, especie, edad));
+            mascotas.add(new Mascota(nombre, especie, edad)); //Crea una instancia de Mascota y la añade a la lista
             System.out.println("Mascota agregada correctamente.");
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
@@ -55,8 +55,8 @@ public class CrudMascota {
             System.out.println("No hay mascotas registradas.");
         } else {
             System.out.println("\n Lista de Mascotas ");
-            for (Mascota m : mascotas) {
-                m.mostrarHistorial();  // Muestra datos de la mascota
+            for (Mascota m : mascotas) { //Si la lista está vacía, informa al usuario
+                m.mostrarHistorial();  // Muestra el historial de la mascota
                 System.out.println();
             }
         }
@@ -64,9 +64,9 @@ public class CrudMascota {
 
     private static void actualizarMascota() {
         System.out.print("Nombre de la mascota a actualizar: ");
-        String nombreBuscar = sc.nextLine();
+        String nombreBuscar = sc.nextLine(); //Busca una mascota por nombre sin importar mayúsculas o minúsculas
 
-        for (Mascota m : mascotas) {
+        for (Mascota m : mascotas) {  //Si la encuentra poide los datos actualizados sino muestra error
             if (m.getNombre().equalsIgnoreCase(nombreBuscar)) {
                 try {
                     System.out.print("Nuevo nombre: ");

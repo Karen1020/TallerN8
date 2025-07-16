@@ -48,7 +48,7 @@ public class Veterinario {
     }*/
     public void setNombre(String nombre) {  //Datos sin campos vacios
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("El nombre del veterinario no puede estar vacío.");
+            throw new IllegalArgumentException("El nombre del veterinario no puede estar vacío");
         }
         this.nombre = nombre;
     }
@@ -62,7 +62,7 @@ public class Veterinario {
     }*/
     public void setEspecialidad(String especialidad) {
         if (especialidad == null || especialidad.isBlank()) { //Especialidad no puede estar vacia
-            throw new IllegalArgumentException("La especialidad no puede estar vacía.");
+            throw new IllegalArgumentException("La especialidad no puede estar vacía");
         }
         this.especialidad = especialidad;
     }

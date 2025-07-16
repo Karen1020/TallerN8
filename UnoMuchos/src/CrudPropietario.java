@@ -19,7 +19,7 @@ public class CrudPropietario {
             System.out.print("Opción: ");
 
             try {
-                opcion = Integer.parseInt(sc.nextLine());
+                opcion = Integer.parseInt(sc.nextLine()); //Se protege con try-catch para que no crashee si escriben letras
             } catch (NumberFormatException e) {
                 opcion = -1;
             }

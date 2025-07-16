@@ -104,7 +104,7 @@ public class Propietario {
     //Validación del nombre
     public void setNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("El nombre no puede estar vacío.");
+            throw new IllegalArgumentException("El nombre no puede estar vacío");
         }
         this.nombre = nombre;
     }
@@ -119,7 +119,7 @@ public class Propietario {
     //Validación del documento
     public void setDocumento(String documento) {
         if (documento == null || documento.length() < 5) {
-            throw new IllegalArgumentException("Documento inválido.");
+            throw new IllegalArgumentException("Documento inválido");
         }
         this.documento = documento;
     }
@@ -134,7 +134,7 @@ public class Propietario {
     //Validación del teléfono
     public void setTelefono(String telefono) {
         if (telefono == null || telefono.length() < 7) {
-            throw new IllegalArgumentException("Teléfono inválido.");
+            throw new IllegalArgumentException("Teléfono inválido");
         }
         this.telefono = telefono;
     }
